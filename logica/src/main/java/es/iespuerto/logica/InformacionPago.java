@@ -10,7 +10,7 @@ public class InformacionPago {
     }
     /**
      * Metodo que dice si el cliente quiere pagar en el restaurante u online
-     * @return
+     * @return boolean
      */
     public boolean esEfectivo(){
         return true;    
