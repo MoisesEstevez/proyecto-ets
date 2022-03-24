@@ -1,4 +1,3 @@
-package es.iespuerto.logica;
 public class Pedido {
     private int cantidad;
     private String producto;
@@ -9,6 +8,9 @@ public class Pedido {
     public void modificarPedido(){
 
     }
+    /**
+     * Metodo para crear un pedido
+     */
     public void crearPedido(){
         
     }
