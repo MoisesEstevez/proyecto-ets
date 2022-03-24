@@ -1,4 +1,3 @@
-
 <p align="center">
   <img src="https://github.com/MoisesEstevez/proyecto-ets/blob/main/img/PortadaRestaurante.png">
 </p>
@@ -17,5 +16,4 @@ A continuación apareceran las partes que conforman este proyecto, realizando un
     
 * ## [*Diagrama de clases de uso*](https://github.com/MoisesEstevez/proyecto-ets/wiki/Diagrama-de-Casos-de-Uso) ##
     Diagrama que representa la estructura y el comportamiento de cada uno de los objetos del sistema y sus relaciones con los demás objetos.
-
 
