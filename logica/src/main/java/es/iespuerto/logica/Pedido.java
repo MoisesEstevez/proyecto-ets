@@ -5,6 +5,9 @@ public class Pedido {
     private double precio;
     private String nombreRestaurante;
     private String ubicacionRestaurante;
+    /**
+     * Metodo para modificar un pedido
+     */
     public void modificarPedido(){
 
     }
