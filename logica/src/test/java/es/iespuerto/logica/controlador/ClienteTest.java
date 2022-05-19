@@ -1,8 +1,9 @@
-package es.iespuerto.logica;
+package es.iespuerto.logica.controlador;
 
-import static org.junit.Assert.assertTrue;
-
+import java.lang.reflect.Executable;
 import org.junit.Test;
+
+
 
 
 public class ClienteTest {
@@ -11,7 +12,7 @@ public class ClienteTest {
      */
     @Test
     public void addTarjetaCreditoTest(){
-
+        
     }
     /**
      * Metodo para comprobar la modificacion de los datos de la cuenta

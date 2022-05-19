@@ -1,15 +1,17 @@
-package es.iespuerto.logica;
-
-import static org.junit.Assert.assertTrue;
-
+package es.iespuerto.logica.modelo;
 import org.junit.Test;
 
+
 public class ValoracionTest {
+
+    Valoracion valora= new Valoracion(5,"Bien");
+
     /**
      * Metodo para comprobar la realizacion de la valoracion valoracion del restaurante
      */
+    
     @Test
     public void realizarValoracionTest(){
-    
+        
     }
 }
