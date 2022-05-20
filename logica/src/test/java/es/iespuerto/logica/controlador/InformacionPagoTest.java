@@ -1,7 +1,7 @@
-package es.iespuerto.controlador;
+package es.iespuerto.logica.controlador;
 
 
-import org.junit.Test;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

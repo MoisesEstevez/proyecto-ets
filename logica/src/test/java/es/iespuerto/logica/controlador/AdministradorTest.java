@@ -2,8 +2,8 @@ package es.iespuerto.logica.controlador;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 import es.iespuerto.logica.modelo.Administrador;
 
 public class AdministradorTest {
@@ -16,7 +16,7 @@ public class AdministradorTest {
      */
     @Test
     public void darBajaMalTest() throws FileNotFoundException, IOException{
-        Assert.assertFalse(Administrador.darDeBaja(n.getNombre(), n.getApellidos(), n.getEmail(), n.getPassword(), n.getDni(), n.getEsCliente()));
+        Assertions.assertFalse(Administrador.darDeBaja(n.getNombre(), n.getApellidos(), n.getEmail(), n.getPassword(), n.getDni(), n.getEsCliente()));
     }
     /**
      * Test para comprobar el dar de baja a los usuarios
@@ -25,7 +25,7 @@ public class AdministradorTest {
      */
     @Test
     public void darBajaTest() throws FileNotFoundException, IOException{
-        Assert.assertTrue(Administrador.darDeBaja(s.getNombre(), s.getApellidos(), s.getEmail(), s.getPassword(), s.getDni(), s.getEsCliente()));
+        Assertions.assertTrue(Administrador.darDeBaja(s.getNombre(), s.getApellidos(), s.getEmail(), s.getPassword(), s.getDni(), s.getEsCliente()));
     }
     /**
      * Test para comprobar que el dar de alta a los usuarios del sistema funciona en caso erroneo
@@ -33,7 +33,7 @@ public class AdministradorTest {
      */
     @Test
     public void darDeAltaMalTest() throws IOException{
-        Assert.assertFalse(Administrador.darDeAlta(s.getNombre(), s.getApellidos(), s.getEmail(), s.getPassword(), s.getDni(), s.getEsCliente()));
+        Assertions.assertFalse(Administrador.darDeAlta(s.getNombre(), s.getApellidos(), s.getEmail(), s.getPassword(), s.getDni(), s.getEsCliente()));
     }
     /**
      * Test para comprobar el dar de alta a los usuarios
@@ -41,6 +41,6 @@ public class AdministradorTest {
      */
     @Test
     public void darDeAltaTest() throws IOException{
-        Assert.assertTrue(Administrador.darDeAlta(n.getNombre(), n.getApellidos(), n.getEmail(), n.getPassword(), n.getDni(), n.getEsCliente()));
+        Assertions.assertTrue(Administrador.darDeAlta(n.getNombre(), n.getApellidos(), n.getEmail(), n.getPassword(), n.getDni(), n.getEsCliente()));
     }    
 }

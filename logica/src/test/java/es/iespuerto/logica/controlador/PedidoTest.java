@@ -1,12 +1,13 @@
 package es.iespuerto.controlador;
 
 import java.io.FileNotFoundException;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import es.iespuerto.modelo.Pedido;
+import es.iespuerto.logica.modelo.Pedido;
 
 public class PedidoTest {
     Pedido p;

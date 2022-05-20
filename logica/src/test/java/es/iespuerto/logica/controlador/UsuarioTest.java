@@ -2,8 +2,8 @@ package es.iespuerto.logica.controlador;
 
 import java.io.IOException;
 
-import org.junit.Assertions;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class UsuarioTest {
     Usuario n= new Usuario("Jose", "Hernandez", "Jos@gmail.com", "12345678", "32454412G", true); 
@@ -14,7 +14,7 @@ public class UsuarioTest {
      */
     @Test
     public void registrarMalTest() throws IOException{
-        Assert.assertTrue(n.registrar(),"No se ha podido registrar el usuario");
+        Assertions.assertTrue(n.registrar());
     } 
     /**
      * Test para comprobar el registro en la aplicacion

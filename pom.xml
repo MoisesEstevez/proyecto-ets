@@ -148,7 +148,9 @@
     </reporting>
 
     <modules>
-        <module>carrito</module>
+        <module>presentacion</module>
+        <module>logica</module>
+        <module>integracion</module>
     </modules>
 
 </project>

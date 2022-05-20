@@ -1,7 +1,8 @@
 package es.iespuerto.logica.controlador;
 
 import java.lang.reflect.Executable;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 
 

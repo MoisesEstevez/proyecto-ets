@@ -2,8 +2,8 @@ package es.iespuerto.logica.controlador;
 
 import java.io.UnsupportedEncodingException;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class CocineroTest {
     Cocinero c= new Cocinero();
@@ -12,7 +12,7 @@ public class CocineroTest {
      */
     @Test
     public void getEstadoPedidoTest(){
-        Assert.assertFalse(c.getEstadoPedido());    
+        Assertions.assertFalse(c.getEstadoPedido());    
     }
     /**
      * Este test comprueba el setter del estado del pedido
@@ -20,7 +20,7 @@ public class CocineroTest {
     @Test
     public void setEstadoPedidoTest(){
         c.setEstadoPedido(true);
-        Assert.assertEquals(true, c.getEstadoPedido());
+        Assertions.assertEquals(true, c.getEstadoPedido());
     }
     /**
      * Test para comprobar si el insertar el estado del pedido funciona correctamente
@@ -29,7 +29,7 @@ public class CocineroTest {
     @Test
     public void insertarPedidoTest() throws UnsupportedEncodingException{
         c.pedidoRealizado();
-        Assert.assertTrue(c.getEstadoPedido());    
+        Assertions.assertTrue(c.getEstadoPedido());    
     }
 
 }

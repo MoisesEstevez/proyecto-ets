@@ -1,6 +1,6 @@
 package es.iespuerto.logica.controlador;
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class CamareroTest {
     Camarero n = new Camarero("Jose", "Manue", "jose@gmail.com", "123456789", "32565412T", true);
@@ -10,11 +10,11 @@ public class CamareroTest {
     @Test
     public void registrarMesaPedidoTest(){
         n.registrarMesaPedido(5);
-        Assert.assertNotNull(n);    
+        Assertions.assertNotNull(n);    
     }
     @Test
     public void getNMesaTest(){
         n.registrarMesaPedido(5);
-        Assert.assertEquals(5, n.getNMesa());    
+        Assertions.assertEquals(5, n.getNMesa());    
     }
 }
