@@ -52,10 +52,5 @@ public class Valoracion {
     public void setValor(int valor) {
         this.valor = valor;
     }
-
-    public static void realizarValoracion(int valor, String comentario){
-        Valoracion valoracion= new Valoracion(valor,comentario);
-    }
-
     
 }

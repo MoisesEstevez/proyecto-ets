@@ -24,7 +24,7 @@ public class Administrador {
      */
     public static boolean darDeAlta(String nombre,String apellidos,String email,String password,String dni,boolean esCliente) throws IOException{
         Usuario m = new Usuario (nombre,apellidos,email,password,dni,esCliente);
-        return m.registrar();
+        return m.registrar("/home/daw/Documentos/proyecto-daw/proyecto-ets/logica/UsuariosAdmin.txt");
     }
 
     /**
@@ -40,9 +40,9 @@ public class Administrador {
      * @throws IOException 
      */
     public static boolean darDeBaja(String nombre,String apellidos,String email,String password,String dni,boolean esCliente) throws FileNotFoundException, IOException{
-        File fichero= new File("D:\\Pablo\\Escritorio\\FicherosPrograma\\UsuariosCreados.txt");
-        FileWriter lector2 = new FileWriter("D:\\Pablo\\Escritorio\\FicherosPrograma\\UsuariosEliminados.txt", true);
-        try (Scanner lector = new Scanner(fichero)) {
+        File fichero= new File("/home/daw/Documentos/proyecto-daw/proyecto-ets/logica/UsuariosCreados.txt");
+        FileWriter lector2 = new FileWriter("/home/daw/Documentos/proyecto-daw/proyecto-ets/logica/UsuariosEliminados.txt", true);
+        Scanner lector = new Scanner(fichero);
             String linea;
             String[] lineaDatos;
             while(lector.hasNextLine()){
@@ -56,7 +56,6 @@ public class Administrador {
             }
             lector.close();
             lector2.close();
-        }
-        return false;
+            return false;
     }
 }

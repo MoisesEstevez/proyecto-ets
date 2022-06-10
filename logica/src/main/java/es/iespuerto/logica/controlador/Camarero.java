@@ -4,8 +4,6 @@
  */
 package es.iespuerto.logica.controlador;
 
-import es.iespuerto.logica.modelo.Pedido;
-
 /**
  *
  * @author daw

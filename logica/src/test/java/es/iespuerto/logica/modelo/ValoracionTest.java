@@ -12,7 +12,25 @@ public class ValoracionTest {
      */
     
     @Test
-    public void realizarValoracionTest(){
-        
+    public void getComentarioTest(){
+        Assertions.assertEquals(valora.getComentario(), "Bien");   
     }
+
+    @Test
+    public void getValorTest(){
+        Assertions.assertEquals(valora.getValor(), 5);   
+    }
+
+    @Test
+    public void setComentarioTest(){
+        valora.setComentario("Regular");
+        Assertions.assertEquals(valora.getComentario(), "Regular");   
+    }
+
+    @Test
+    public void setValorTest(){
+        valora.setValor(6);
+        Assertions.assertEquals(valora.getValor(), 6);   
+    }
+    
 }

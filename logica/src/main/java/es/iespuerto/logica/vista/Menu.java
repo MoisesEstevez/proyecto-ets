@@ -2,7 +2,7 @@
 
 package es.iespuerto.logica.vista;
 
-import javax.sound.sampled.SourceDataLine;
+
 
 /**
  *
@@ -16,7 +16,6 @@ public class Menu {
     private String dni;
     private boolean esCliente;
     public static void verMenu(){
-        
         System.out.println("<!doctype html>\n" +
         "<html lang=\"es\">\n" +
         "  <head>\n" +
@@ -44,6 +43,7 @@ public class Menu {
         "  </form> \n" +
         "  </body>\n" +
         "</html>");
+        
     } 
     public static void main(String args[]){
         verMenu();

@@ -8,6 +8,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.*;
 
+
 /**
  *
  * @author daw
@@ -125,20 +126,24 @@ public class Pedido {
         return precio;
     }
     /**
+     * Getter del mapa de pedido
+     * @return pedido
+     */
+    public Map getPedido(){
+        return pedido;
+    }
+    /**
      * Metodo para modificar el pedido
      * @param pedido 
      */
-    public void modificarPedido(Pedido pedido,int cantidad,String producto, String nombreRestaurante,String ubicacionRestaurante, double precio){
-        if(cantidad!=0){
-            pedido.setCantidad(cantidad);
-        } else if(producto!=null){
-            pedido.setProducto(producto);
-        } else if(nombreRestaurante!=null){
-            pedido.setNombreRestaurante(nombreRestaurante);
-        } else if(ubicacionRestaurante!=null){
-            pedido.setUbicacionRestaurante(ubicacionRestaurante);
-        } else if(precio!=0){
-           pedido.setPrecio(precio); 
+    public boolean modificarPedido(Pedido pedido){
+        if(pedido.cantidad!=this.cantidad || !Objects.equals(pedido.producto, this.producto) || pedido.precio!=this.precio){
+            this.cantidad=pedido.cantidad;
+            this.producto=pedido.producto;
+            this.precio=pedido.precio;
+            return true;
+        } else {
+            return false;
         }
                 
     }
@@ -150,25 +155,5 @@ public class Pedido {
         Fichero.addPedido(this.cantidad,this.nPedido,this.producto,this.nombreRestaurante,this.ubicacionRestaurante,this.precio,cantidadPedidos);
         pedido.put(nPedido, producto);
     }
-    /**
-     * Metodo toString sobreescrito de la clase Object
-     * @return Devuelve un ticket del pedido
-     */
-    @Override
-    public String toString(){
-        double precioTotal=0;
-        System.out.println("----------- ------ -------- --------");
-        System.out.println("Producto    Precio Cantidad Subtotal");
-        System.out.println("----------- ------ -------- --------");
-        for (int i = 0; i < cantidadPedidos; i++) {
-            for(String key: productos.keySet()){
-                System.out.printf("%-11s %-6.2f %8d %8.2f\n",key,productos.get(key),cantidadProductos.get(key),productos.get(key)*cantidadProductos.get(key));
-                precioTotal+=productos.get(key)*cantidadProductos.get(key);
-            }
-        }
-        System.out.println("----------- ------ -------- --------");
-        System.out.printf("%26s: %8.2f\n","Total",precioTotal);
-        return "----------- ------ -------- --------";
-        
-    } 
+
 }

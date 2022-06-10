@@ -1,5 +1,4 @@
 package es.iespuerto.logica.controlador;
-
 public class InformacionPago {
     private Cliente tarjetaCredito;
     private boolean efectivo;
@@ -29,10 +28,11 @@ public class InformacionPago {
      */
 
     public boolean sistemaPago(){
+        Cliente c = new Cliente();
         if(!esEfectivo(this.efectivo)){
-            Cliente.getNumeroTarjeta(); 
-            Cliente.getFechaCaducidad();
-            Cliente.getCodigoTrasero();
+            c.getNumeroTarjeta(); 
+            c.getFechaCaducidad();
+            c.getCodigoTrasero();
             return true;
         } else{
             return false;

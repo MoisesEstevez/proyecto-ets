@@ -1,29 +1,14 @@
 
 package es.iespuerto.logica.controlador;
 
-public class Cliente extends Usuario{
-    private static String ubicacion;
-    private static String numeroTarjeta;
-    private static String fechaCaducidad;
-    private static int codigoTrasero;
+public class Cliente {
+    private String ubicacion;
+    private String numeroTarjeta;
+    private String fechaCaducidad;
+    private int codigoTrasero;
     
 
-    /**
-     * Constructor de la clase Cliente
-     * @param nombre Nombre del usuario
-     * @param apellidos Apellidos del Usuario
-     * @param email Email del Usuario
-     * @param password Contrasena del Usuario
-     * @param dni DNI del Usuario
-     * @param esCliente Variable para saber si es cliente o trabajador
-     */
-
-    public Cliente(String nombre, String apellidos, String email, String password, String dni, boolean esCliente) {
-        super(nombre, apellidos, email, password, dni, true);
-    }
-
-
-
+    
     /**
      * Metodo para aniadir una tarjeta de credito
      * @param numeroTarjeta Numero de la tarjeta de credito
@@ -33,10 +18,10 @@ public class Cliente extends Usuario{
      */
 
     public void addTarjetaCredito(String numeroTarjeta, String fechaCaducidad, int codigoTrasero) throws Exception{
-        if(numeroTarjeta.length()>=16 || numeroTarjeta.length()>=19){
+        if(numeroTarjeta.length()>=16 && numeroTarjeta.length()<=19){
             tarjetaDeCredito(numeroTarjeta,fechaCaducidad,codigoTrasero);
         } else {
-            throw new Exception("La cuenta que ha introducido no es correcta");
+            tarjetaDeCredito(null, null, 0);
         }
         
     }
@@ -75,7 +60,7 @@ public class Cliente extends Usuario{
      * Getter de numero de tarjeta
      * @return Devuelve el numero de la tarjeta
      */
-    public static String getNumeroTarjeta() {
+    public  String getNumeroTarjeta() {
         return numeroTarjeta;
     }
 
@@ -93,7 +78,7 @@ public class Cliente extends Usuario{
      * Getter de fecha de caducidad
      * @return Devuelve la fecha de caducidad de la tarjeta de credito
      */
-    public static String getFechaCaducidad() {
+    public String getFechaCaducidad() {
         return fechaCaducidad;
     }
 
@@ -111,7 +96,7 @@ public class Cliente extends Usuario{
      * Getter del codigo trasero
      * @return Getter codigo trasero de la tarjeta
      */
-    public static int getCodigoTrasero() {
+    public  int getCodigoTrasero() {
         return codigoTrasero;
     }
 

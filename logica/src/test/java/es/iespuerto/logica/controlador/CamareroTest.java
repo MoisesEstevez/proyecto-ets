@@ -12,9 +12,28 @@ public class CamareroTest {
         n.registrarMesaPedido(5);
         Assertions.assertNotNull(n);    
     }
+    /**
+     * Metodo para comprobar el registro de la mesa de la que el camarero realiza el pedido erroneamente
+     */
+    @Test
+    public void registrarMesaPedidoTestMal(){
+        n.registrarMesaPedido(5);
+        Assertions.assertNotEquals(4,n.getNMesa());    
+    }
+    /**
+     * Test para registrar mesa
+     */
     @Test
     public void getNMesaTest(){
         n.registrarMesaPedido(5);
         Assertions.assertEquals(5, n.getNMesa());    
+    }
+    /**
+     * Test para registrar mesa de manera erronea
+     */
+    @Test
+    public void getNMesaTestMal(){
+        n.registrarMesaPedido(5);
+        Assertions.assertNotEquals(6, n.getNMesa()); 
     }
 }

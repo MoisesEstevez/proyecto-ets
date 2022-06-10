@@ -117,11 +117,11 @@ public class Usuario {
      * @return Si devuelve false el usuario ya esta registrado y si es true no lo esta
      * @throws java.io.IOException
      */
-    public boolean registrar() throws IOException{
-        if (ifExist("D:\\Pablo\\Escritorio\\FicherosPrograma\\UsuariosCreados.txt")) {
+    public boolean registrar(String ruta) throws IOException{
+        if (ifExist(ruta)) {
             return false;
         } else {
-            FileWriter lector = new FileWriter("D:\\Pablo\\Escritorio\\FicherosPrograma\\UsuariosCreados.txt", true);
+            FileWriter lector = new FileWriter(ruta, true);
             lector.write(dni+";"+nombre+";"+apellidos+";"+email+";"+password+";"+esCliente+";\n");
             lector.close();
             return true;
@@ -154,6 +154,6 @@ public class Usuario {
      * @throws java.io.IOException
      */
     public  boolean iniciarSesion() throws IOException{
-        return ifExist("D:\\Pablo\\Escritorio\\FicherosPrograma\\UsuariosCreados.txt");
+        return ifExist("/home/daw/Documentos/proyecto-daw/proyecto-ets/logica/UsuariosCreados.txt");
     }  
 }
